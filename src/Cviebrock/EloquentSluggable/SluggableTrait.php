@@ -163,7 +163,7 @@ trait SluggableTrait {
 		$save_to         = $this->sluggable['save_to'];
 		$include_trashed = $this->sluggable['include_trashed'];
 
-		$instance = new static;
+		$instance = new self;
 
 		$query = $instance->where( $save_to, 'LIKE', $slug.'%' );
 
